@@ -11,7 +11,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # Add executable target
 add_executable(FinanceApp
     src/main.cpp
-    src/other_source.cpp
 )
 
 # Optionally, set build type (Debug or Release)
