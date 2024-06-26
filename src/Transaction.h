@@ -12,12 +12,13 @@ class Transaction {
         Leisure,
         Other
     };
-
+  //user inputted constructor
   Transaction() {
     input();
   }
-  Transaction(double amount, const std::string& desc, std::time_t date, bool isIncome, Category category)
-        : amount(amount), desc(desc), date(date), isIncome(isIncome), Category(category) {}
+  //default parameters
+  Transaction(double amount, const std::string& desc, std::time_t date, bool isIncome, Category category);
+ 
 
     double getAmount() const { return amount; }
     std::string getDesc() const { return desc; }
