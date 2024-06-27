@@ -33,6 +33,7 @@ class Transaction {
   Category category;
   bool isIncome
   void input();
+  std::time_t userInputDate();
 };
 
 
