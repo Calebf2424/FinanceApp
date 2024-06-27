@@ -8,7 +8,7 @@ Transaction::Transaction() {
     userInput(); // Call function to handle user input
 }
 
-Transaction::Transaction(double amount_, const std::string& desc_, std::time_t date_, bool isIncome_, Category category_) : amount(amount_), desc(desc_), date(date_), category(category_){}
+Transaction::Transaction(double amount_, const std::string& desc_, std::time_t date_, Category category_) : amount(amount_), desc(desc_), date(date_), category(category_){}
 
 std::time_t Transaction::getUserInputDate() {
     std::tm tm = {};
