@@ -31,7 +31,7 @@ class Transaction {
   std::string desc;
   std::time_t date;
   Category category;
-  bool isIncome
+  bool isIncome;
   void input();
   std::time_t userInputDate();
 };
