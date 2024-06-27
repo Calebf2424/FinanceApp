@@ -12,6 +12,7 @@ class Transaction {
         Leisure,
         Other
     };
+  //unsure which i need yet
   //user inputted constructor
   Transaction() {
     input();
