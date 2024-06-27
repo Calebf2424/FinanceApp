@@ -18,31 +18,21 @@ class Transaction {
     input();
   }
   //default parameters
-  Transaction(double amount, const std::string& desc, std::time_t date, bool isIncome, Category category);
+  Transaction(double amount, const std::string& desc, std::time_t date, Category category);
  
 
     double getAmount() const { return amount; }
     std::string getDesc() const { return desc; }
     std::time_t getDate() const { return date; }
-    bool getIsIncome() const { return isIncome; }
 
  private:
   double amount;
   std::string desc;
   std::time_t date;
   Category category;
-  bool isIncome;
   void input();
   std::time_t userInputDate();
 };
-
-
-
-
-
-
-
-
 
 
 
