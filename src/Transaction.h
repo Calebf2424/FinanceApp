@@ -14,9 +14,7 @@ class Transaction {
     };
 
   //user inputted constructor
-  Transaction() {
-    input();
-  }
+  Transaction();
 
     double getAmount() const { return amount; }
     std::string getDesc() const { return desc; }
