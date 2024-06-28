@@ -23,3 +23,11 @@ void TransactionManager::displayTransactions() const {
                   << "Category: " << static_cast<int>(t.getCategory()) << "\n\n";
     }
 }
+
+int TransactionManager::getSum(){
+    double total = 0;
+    for (const Transaction& t : transactions) {
+        total += t.getAmount();
+    }
+    return total;
+}
