@@ -7,11 +7,6 @@
 
 class Transaction {
  public:
-    enum class Category {
-        Living,
-        Leisure,
-        Other
-    };
 
   //user inputted constructor
   Transaction();
@@ -24,7 +19,6 @@ class Transaction {
   double amount;
   std::string desc;
   std::time_t date;
-  Category category;
   void userInput();
   std::time_t userInputDate();
 };
