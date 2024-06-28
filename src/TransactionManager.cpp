@@ -23,7 +23,7 @@ void TransactionManager::displayTransactions() const {
         std::cout << "Transaction " << i + 1 << ":\n"
                   << "Amount: " << t.getAmount() << "\n"
                   << "Description: " << t.getDesc() << "\n"
-                  << "Date: " << std::put_time(std::localtime(&t.getDate()), "%Y-%m-%d") << "\n"
+                  << "Date: " << std::put_time(std::localtime(t.getDate()), "%Y-%m-%d") << "\n"
     }
 }
 
