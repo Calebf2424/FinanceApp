@@ -22,7 +22,7 @@ void TransactionManager::displayTransactions() const {
         const Transaction& t = transactions[i];
         std::cout << "Transaction " << i + 1 << ":\n"
                   << "Amount: " << t.getAmount() << "\n"
-                  << "Description: " << t.getDesc() << endl;
+                  << "Description: " << t.getDesc() << std::endl;
     }
 }
 
