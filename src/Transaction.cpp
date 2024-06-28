@@ -48,24 +48,4 @@ void Transaction::userInput() {
 
     // Input date (assuming current time for simplicity)
     date = userInputDate();
-
-    // Input category
-    int categoryChoice;
-    std::cout << "Category (0: Living, 1: Leisure, 2: Other): ";
-    std::cin >> categoryChoice;
-    switch (categoryChoice) {
-        case 0:
-            category = Category::Living;
-            break;
-        case 1:
-            category = Category::Leisure;
-            break;
-        case 2:
-            category = Category::Other;
-            break;
-        default:
-            std::cerr << "Invalid category choice. Defaulting to Other." << std::endl;
-            category = Category::Other;
-            break;
-}
 }
