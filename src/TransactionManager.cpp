@@ -1,11 +1,13 @@
 #include "TransactionManager.h"
 #include <iostream>
+#include <ctime>
+#include <cstddef>
 
 void TransactionManager::addTransaction(const Transaction& transaction) {
     transactions.push_back(transaction);
 }
 
-void TransactionManager::removeTransaction(size_t index) {
+void TransactionManager::removeTransaction(std::size_t index) {
     if (index < transactions.size()) {
         transactions.erase(transactions.begin() + index);
     } else {
