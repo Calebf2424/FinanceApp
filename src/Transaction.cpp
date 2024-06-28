@@ -19,7 +19,4 @@ void Transaction::userInput() {
     std::cout << "Description: ";
     std::cin.ignore(); // Ignore newline character left in the stream
     std::getline(std::cin, desc);
-
-    // Input date (assuming current time for simplicity)
-    date = userInputDate();
 }
