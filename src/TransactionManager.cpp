@@ -1,4 +1,5 @@
 #include "TransactionManager.h"
+#include "Transaction.h"
 #include <iostream>
 #include <iomanip>
 #include <ctime>
