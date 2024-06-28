@@ -1,37 +1,11 @@
 #include "Transaction.h"
-#include <ctime>
+#include "TransactionManager.h"
 #include <iomanip>
 #include <sstream>
 #include <iostream>
 
 Transaction::Transaction() {
     userInput(); // Call function to handle user input
-}
-
-std::time_t Transaction::userInputDate() {
-    std::tm tm = {};
-    std::string dateStr;
-
-    std::cout << "Enter the date (YYYY-MM-DD): ";
-    std::getline(std::cin, dateStr);
-
-    std::istringstream ss(dateStr);
-    ss >> std::get_time(&tm, "%Y-%m-%d");
-
-    if (ss.fail()) {
-        std::cerr << "Failed to parse date. Please use the correct format." << std::endl;
-        return std::time(nullptr); // Return current time as a fallback
-    }
-
-    tm.tm_hour = 0; tm.tm_min = 0; tm.tm_sec = 0; // Set time to midnight
-    std::time_t date = std::mktime(&tm);
-    
-    if (date == -1) {
-        std::cerr << "Error in converting time." << std::endl;
-        return std::time(nullptr); // Return current time as a fallback
-    }
-    
-    return date;
 }
 
 void Transaction::userInput() {
