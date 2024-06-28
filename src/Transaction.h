@@ -12,14 +12,11 @@ class Transaction {
         Leisure,
         Other
     };
-  //unsure which i need yet
+
   //user inputted constructor
   Transaction() {
     input();
   }
-  //default parameters
-  Transaction(double amount, const std::string& desc, std::time_t date, Category category);
- 
 
     double getAmount() const { return amount; }
     std::string getDesc() const { return desc; }
