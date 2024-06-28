@@ -25,7 +25,7 @@ class Transaction {
   std::string desc;
   std::time_t date;
   Category category;
-  void input();
+  void userInput();
   std::time_t userInputDate();
 };
 
