@@ -8,7 +8,7 @@ Transaction::Transaction() {
     userInput(); // Call function to handle user input
 }
 
-std::time_t Transaction::getUserInputDate() {
+std::time_t Transaction::userInputDate() {
     std::tm tm = {};
     std::string dateStr;
 
