@@ -47,7 +47,7 @@ void Transaction::userInput() {
     std::getline(std::cin, desc);
 
     // Input date (assuming current time for simplicity)
-    date = getUserInputDate();
+    date = userInputDate();
 
     // Input category
     int categoryChoice;
