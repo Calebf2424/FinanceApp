@@ -13,6 +13,8 @@ add_executable(FinanceApp
     src/main.cpp
     src/Transaction.cpp
     src/TransactionManager.cpp
+    src/Transaction.h       # Add header files for IDE integration (optional)
+    src/TransactionManager.h # Add header files for IDE integration (optional)
 )
 
 # Optionally, set build type (Debug or Release)
