@@ -68,3 +68,4 @@ void Transaction::userInput() {
             category = Category::Other;
             break;
 }
+}
