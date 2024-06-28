@@ -3,11 +3,12 @@
 
 #include "Transaction.h"
 #include <vector>
+#include <cstddef>
 
 class TransactionManager {
 public:
     void addTransaction(const Transaction& transaction);
-    void removeTransaction(size_t index);
+    void removeTransaction(std::size_t index);
     void displayTransactions() const;
     int getSum();
 
