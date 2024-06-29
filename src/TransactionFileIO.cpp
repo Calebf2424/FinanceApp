@@ -2,6 +2,7 @@
 #include "Transaction.h"
 #include "TransactionManager.h"
 #include <vector>
+#include <string>
 #include <fstream>
 #include <iostream>
 
