@@ -14,7 +14,7 @@ public:
 
 private:
     std::vector<Transaction> transactions;
-    int sum;
+    double sum;
 };
 
 #endif
