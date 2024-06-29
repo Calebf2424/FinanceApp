@@ -9,8 +9,8 @@ Transaction::Transaction() {
     userInput(); // Call function to handle user input
 }
 
-Transaction::Transaction(double amt, const std::string& desc)
-        : amount(amt), desc(desc) {}
+Transaction::Transaction(double amount, const std::string& desc)
+        : amount(amuount), desc(desc) {}
 
 void Transaction::userInput() {
       std::cout << "Enter transaction details:" << std::endl;
