@@ -1,2 +1,10 @@
-#ifndef TRANSACTION_FILE_IO.h
-#def TRANSACTION_FILE_IO.h
+#ifndef TRANSACTIONFILEIO_H
+#def TRANSACTIONFILEIO_H
+
+class TransactionFileIO {
+ public:
+  static void saveToFile(const std::vector<Transaction>& transactions, const std::string& filename);
+  static std::vector<Transaction> loadFromFile(const std::string& filename);
+
+};
+#endif
