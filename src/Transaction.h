@@ -9,6 +9,8 @@ class Transaction {
   //user inputted constructor
   Transaction();
 
+  Transaction(double amt, const std::string& desc);
+
   double getAmount() const { return amount; }
   std::string getDesc() const { return desc; }
 
