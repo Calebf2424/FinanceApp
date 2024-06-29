@@ -6,7 +6,7 @@
 #include <fstream>
 #include <iostream>
 
-void TransactionFileIO::saveToFile(const std::vector<Transaction>& transactions, const std::string& filename) {
+void TransactionFileIO::saveToFile(const std::vector<Transaction*>& transactions, const std::string& filename) {
     std::ofstream outFile(filename);
     if (!outFile) {
         std::cerr << "Error opening file for writing: " << filename << " Could not save data" << std::endl;
@@ -20,8 +20,8 @@ void TransactionFileIO::saveToFile(const std::vector<Transaction>& transactions,
     outFile.close();
 }
 
-std::vector<Transaction> TransactionFileIO::loadFromFile(const std::string& filename) {
-    std::vector<Transaction> transactions;
+std::vector<Transaction*> TransactionFileIO::loadFromFile(const std::string& filename) {
+    std::vector<Transaction*> transactions;
     std::ifstream inFile(filename);
     if (!inFile) {
         std::cerr << "Error opening file for reading: " << filename << " No data loaded" << std::endl;
