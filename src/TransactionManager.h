@@ -10,7 +10,7 @@ public:
     void addTransaction(const Transaction& transaction);
     void removeTransaction(std::size_t index);
     void displayTransactions() const;
-    int getSum();
+    double getSum();
 
 private:
     std::vector<Transaction> transactions;
