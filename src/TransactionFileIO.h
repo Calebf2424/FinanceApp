@@ -2,7 +2,7 @@
 #define TRANSACTIONFILEIO_H
 #include <vector>
 #include <string>
-#include <ifstream>
+#include <fstream>
 #include <iostream>
 
 class TransactionFileIO {
