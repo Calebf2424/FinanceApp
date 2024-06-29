@@ -1,5 +1,7 @@
 #ifndef TRANSACTIONFILEIO_H
 #define TRANSACTIONFILEIO_H
+#include "Transaction.h"
+#include "TransactionManager.h"
 #include <vector>
 #include <string>
 #include <fstream>
