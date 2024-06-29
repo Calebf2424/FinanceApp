@@ -1,5 +1,6 @@
 #include "TransactionManager.h"
 #include "Transaction.h"
+#include "TransactionFileIO.h"
 #include <iostream>
 #include <iomanip>
 #include <ctime>
