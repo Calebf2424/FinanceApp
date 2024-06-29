@@ -1,5 +1,5 @@
 #ifndef TRANSACTIONFILEIO_H
-#def TRANSACTIONFILEIO_H
+#define TRANSACTIONFILEIO_H
 
 class TransactionFileIO {
  public:
