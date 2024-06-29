@@ -10,7 +10,7 @@ Transaction::Transaction() {
 }
 
 Transaction::Transaction(double amount, const std::string& desc)
-        : amount(amuount), desc(desc) {}
+        : amount(amount), desc(desc) {}
 
 void Transaction::userInput() {
       std::cout << "Enter transaction details:" << std::endl;
