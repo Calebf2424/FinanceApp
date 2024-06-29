@@ -19,7 +19,7 @@ int main() {
     manager.displayTransactions();
 
     // Calculate and display total sum
-    int totalSum = manager.getSum();
+    double totalSum = manager.getSum();
     std::cout << "\nTotal sum of transactions: " << totalSum << std::endl;
 
     return 0;
