@@ -1,4 +1,6 @@
 #include "TransactionFileIO.h"
+#include "Transaction.h"
+#include "TransactionManager.h"
 #include <fstream>
 #include <iostream>
 
