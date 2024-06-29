@@ -14,7 +14,7 @@ void TransactionFileIO::saveToFile(const std::vector<Transaction>& transactions,
     }
 
     for (const auto& transaction : transactions) {
-        outFile << transaction.getAmount() << "," << transaction.getDescription() << std::endl;
+        outFile << transaction.getAmount() << "," << transaction.getDesc() << std::endl;
     }
 
     outFile.close();
@@ -29,14 +29,14 @@ std::vector<Transaction> TransactionFileIO::loadFromFile(const std::string& file
     }
 
     double amount;
-    std::string description;
+    std::string desc;
 
     while (inFile >> amount) {
         if (inFile.peek() == ',') {
             inFile.ignore();
         }
-        std::getline(inFile, description);
-        transactions.emplace_back(amount, description);
+        std::getline(inFile, desc);
+        transactions.emplace_back(amount, desc);
     }
 
     inFile.close();
