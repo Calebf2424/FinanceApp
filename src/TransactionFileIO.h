@@ -1,5 +1,9 @@
 #ifndef TRANSACTIONFILEIO_H
 #define TRANSACTIONFILEIO_H
+#include <vector>
+#include <string>
+#include <ifstream>
+#include <iostream>
 
 class TransactionFileIO {
  public:
