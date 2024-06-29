@@ -26,7 +26,7 @@ void TransactionManager::displayTransactions() const {
     }
 }
 
-int TransactionManager::getSum(){
+double TransactionManager::getSum(){
     double total = 0;
     for (const Transaction& t : transactions) {
         total += t.getAmount();
