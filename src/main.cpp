@@ -29,7 +29,7 @@ int main() {
 
     int choice;
     do {
-        clearScreen();
+        
         // Display menu
         std::cout << "\nMenu:\n"
                   << "1. Add Transaction\n"
@@ -44,6 +44,7 @@ int main() {
             case 1: {
                 Transaction transaction;
                 manager.addTransaction(transaction);
+                clearScreen();
                 break;
             }
             case 2: {
@@ -58,6 +59,7 @@ int main() {
                 std::cout << "Enter index of transaction to delete: ";
                 std::cin >> index;
                 manager.removeTransaction(index - 1); // Assuming index is 1-based
+                clearScreen();
                 break;
             }
             case 4: {
