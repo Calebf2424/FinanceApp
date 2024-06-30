@@ -32,6 +32,8 @@ int main() {
     clearScreen();
     std::cout << "Budget Application\n" << std::endl;
 
+    double goal = manager.getMonthGoal();
+
     do {
         
         // Display menu
@@ -71,6 +73,8 @@ int main() {
             case 4: {
                 manager.displayTransactions();
                 std::cout << "\nTotal: " << manager.getSum() << "\n" << std::endl;
+                double diff = goal - manager.getSum();
+                std::cout << "\nRemaining in budget:" << diff << "\n" << std::endl;
                 break;
             }
             case 5: {
