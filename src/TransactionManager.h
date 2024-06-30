@@ -11,10 +11,13 @@ public:
     void removeTransaction(std::size_t index);
     void displayTransactions() const;
     double getSum();
+    double getAccountBalance() const;
+    void setAccountBalance(double balance);
 
 private:
     std::vector<Transaction> transactions;
     double total;
+    double accountBalance;
 };
 
 #endif
