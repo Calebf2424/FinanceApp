@@ -12,11 +12,3 @@ bool Utility::isValidInt(int &input, int min, int max) {
     }
     return true;
 }
-
-bool isValidDouble(const std::string& str) {
-    std::istringstream iss(str);
-    double d;
-    char c;
-    // Try to parse the string as a double and ensure there are no extra characters
-    return iss >> d && !(iss >> c);
-}
