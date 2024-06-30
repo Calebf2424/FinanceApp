@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 #include <cmath>
+#include <ctime>
 #include "TransactionManager.h"
 #include "Transaction.h"
 #include "TransactionFileIO.h"
@@ -28,6 +29,15 @@ int main() {
 
     // Load existing transactions from file
     loadTransactionsFromFile(manager, filename);
+    time_t t = time(0);
+    struct tm *now = localtime(&t);
+    
+    double year = now->tm_year + 1900;
+    double month = now->tm_mon + 1;
+    double day = now->tm_mday;
+
+    double daysInMonth = getDaysInMonth(month, year);
+    double remainingDays = daysInMonth - day;
 
     int choice;
     clearScreen();
@@ -76,7 +86,9 @@ int main() {
                 std::cout << "\nTotal: " << manager.getSum() << "\n" << std::endl;
                 double diff = goal - manager.getSum();
                 if (diff > 0){
+                    double remaining = diff / remainingDays;
                     std::cout << "\nRemaining in budget:" << diff << "\n" << std::endl;
+                    std::cout << "You can spend " << remaining << " per day for the remainder of the month\n" << std::endl;
                 }
                 else {
                     std::cout << "\nYou are over budget by " << abs(diff) <<"\n" << std::endl;
