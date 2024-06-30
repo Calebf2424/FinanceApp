@@ -35,4 +35,10 @@ double TransactionManager::getSum(){
     return total;
 }
 
-void TransactionManager::setAccount()
+double TransactionManager::setAccountBalance(){
+    double balance;
+    std::cout << "Set total initial bank balance:" << std::endl;
+    std::cin >> balance;
+
+    return balance;
+}
