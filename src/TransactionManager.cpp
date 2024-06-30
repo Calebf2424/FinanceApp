@@ -21,7 +21,7 @@ void TransactionManager::removeTransaction(std::size_t index) {
 void TransactionManager::displayTransactions() const {
     for (size_t i = 0; i < transactions.size(); ++i) {
         const Transaction& t = transactions[i];
-        std::cout << "Transaction " << i + 1 << ":\n"
+        std::cout << "\nTransaction " << i + 1 << ":\n"
                   << "Amount: " << t.getAmount() << "\n"
                   << "Description: " << t.getDesc() << std::endl;
     }
