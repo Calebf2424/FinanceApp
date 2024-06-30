@@ -2,7 +2,7 @@
 #include <limits>
 #include "Utility.h"
 
-bool Utility::isValidInt(int &input, int min, int max) {
+bool isValidInt(int &input, int min, int max) {
     std::cin >> input;
     if (std::cin.fail() || input < min || input > max) {
         std::cin.clear(); // clear error flags
