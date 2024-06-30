@@ -27,6 +27,10 @@ void TransactionManager::displayTransactions() const {
     }
 }
 
+void TransactionManager::editTransactions(std::size_t index) {
+    
+}
+
 double TransactionManager::getSum(){
     double total = 0.0;
     for (const Transaction& t : transactions) {
