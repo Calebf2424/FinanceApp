@@ -10,9 +10,8 @@ public:
     void addTransaction(const Transaction& transaction);
     void removeTransaction(std::size_t index);
     void displayTransactions() const;
+    void editTransaction();
     double getSum();
-    double getAccountBalance() const;
-    double setAccountBalance();
     const std::vector<Transaction>& getAllTransactions() const;
 
 private:
