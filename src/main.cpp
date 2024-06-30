@@ -14,8 +14,10 @@ void loadTransactionsFromFile(TransactionManager& manager, const std::string& fi
 }
 
 void clearScreen() {
-    int ignore = system("cls");
-    (void)ignore; 
+    int result = system("cls");
+    if (result != 0) {
+        std::cerr << "Failed to clear screen using cls." << std::endl;
+    }
 }
 
 int main() {
