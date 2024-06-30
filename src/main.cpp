@@ -22,7 +22,7 @@ void clearScreen() {
 
 int main() {
     TransactionManager manager;
-    const std::string filename = "transactions.txt";
+    const std::string filename = "data\transactions.txt";
 
     // Load existing transactions from file
     loadTransactionsFromFile(manager, filename);
