@@ -37,7 +37,7 @@ int main() {
     int day = now->tm_mday;
 
     int daysInMonth = getDaysInMonth(month, year);
-    int remainingDays = daysInMonth - day;
+    int remainingDays = daysInMonth - day + 1;
 
     int choice;
     clearScreen();
