@@ -63,7 +63,7 @@ int main() {
     } while (choice != 5);
 
     // Save transactions back to file before exiting
-    TransactionFileIO::saveToFile(manager.getAllTransactions(), filename);
+    TransactionFileIO::saveToFile(manager.getAllTransactions, filename);
 
     return 0;
 }
