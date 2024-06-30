@@ -71,7 +71,7 @@ int main() {
             }
             case 4: {
                 manager.displayTransactions();
-                std::cout << "Total: " << manager.getSum() << "\n" << std::endl;
+                std::cout << "\nTotal: " << manager.getSum() << "\n" << std::endl;
                 break;
             }
             case 5:
