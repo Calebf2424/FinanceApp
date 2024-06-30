@@ -79,7 +79,7 @@ int main() {
                     std::cout << "\nRemaining in budget:" << diff << "\n" << std::endl;
                 }
                 else {
-                    std::cout << "\nYou are over budget by" << abs(diff) <<"\n" << std::endl;
+                    std::cout << "\nYou are over budget by " << abs(diff) <<"\n" << std::endl;
                 }
                 break;
             }
