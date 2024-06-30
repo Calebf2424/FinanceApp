@@ -17,7 +17,6 @@ public:
 private:
     std::vector<Transaction> transactions;
     double total;
-    double accountBalance;
 };
 
 #endif
