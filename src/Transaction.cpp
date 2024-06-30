@@ -2,6 +2,7 @@
 #include "TransactionManager.h"
 #include "TransactionFileIO.h"
 #include <iomanip>
+#include <climits>
 #include <sstream>
 #include <iostream>
 
