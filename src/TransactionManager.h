@@ -10,7 +10,6 @@ public:
     void addTransaction(const Transaction& transaction);
     void removeTransaction(std::size_t index);
     void displayTransactions() const;
-    void editTransaction(std::size_t index);
     double getSum();
     const std::vector<Transaction>& getAllTransactions() const;
 
