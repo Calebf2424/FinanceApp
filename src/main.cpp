@@ -28,6 +28,9 @@ int main() {
     loadTransactionsFromFile(manager, filename);
 
     int choice;
+
+    std::cout << "Budget Application\n" << std::endl;
+
     do {
         
         // Display menu
@@ -64,7 +67,7 @@ int main() {
             }
             case 4: {
                 manager.displayTransactions();
-                std::cout << "Total: " << manager.getSum() << std::endl;
+                std::cout << "Total: " << manager.getSum() << "\n" << std::endl;
                 break;
             }
             case 5:
