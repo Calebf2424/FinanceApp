@@ -37,12 +37,14 @@ int main() {
         // Display menu
         std::cout << "\nMenu:\n"
                   << "1. Add Transaction\n"
-                  << "2. Delete Transaction\n"
-                  << "3. Display Transactions\n"
-                  << "4. Exit\n"
+                  << "2. Delete specific Transaction\n"
+                  << "3. Delete all Transactions\n"
+                  << "4. Display all Transactions\n"
+                  << "5. Clear the display\n"
+                  << "6. Save and exit the application\n"
                   << "Enter your choice: ";
         
-        while (!isValidInt(choice, 1, 4)) {
+        while (!isValidInt(choice, 1, 6)) {
             std::cout << "Enter your choice: ";
         }
         
@@ -62,17 +64,26 @@ int main() {
                 break;
             }
             case 3: {
+                manager.clearTransactions();
+                std::cout << "Deleted all transactions:\n";
+                break;
+            }
+            case 4: {
                 manager.displayTransactions();
                 std::cout << "\nTotal: " << manager.getSum() << "\n" << std::endl;
                 break;
             }
-            case 4:
+            case 5: {
+                clearScreen();
+                break;
+            }
+            case 6:
                 std::cout << "Exiting...\n";
                 break;
             default:
                 std::cout << "Invalid choice. Please enter again.\n";
         }
-    } while (choice != 4);
+    } while (choice != 6);
 
     // Save transactions back to file before exiting
     const std::vector<Transaction>& allTransactions = manager.getAllTransactions();

@@ -13,6 +13,7 @@ public:
     double getSum();
     const std::vector<Transaction>& getAllTransactions() const;
     double getMonthGoal();
+    void clearTransactions();
 
 private:
     std::vector<Transaction> transactions;

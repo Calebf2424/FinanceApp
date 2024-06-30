@@ -46,3 +46,7 @@ double TransactionManager::getMonthGoal() {
 const std::vector<Transaction>& TransactionManager::getAllTransactions() const {
     return transactions;
 }
+
+void TransactionManager::clearTransactions() {
+    transactions.clear();
+}
