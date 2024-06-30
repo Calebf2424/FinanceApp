@@ -20,6 +20,17 @@ void clearScreen() {
     }
 }
 
+bool isValid(int &input, int min, int max) {
+    std::cin >> input;
+    if (std::cin.fail() || input < min || input > max) {
+        std::cin.clear(); // clear error flags
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // discard invalid input
+        std::cout << "Invalid input. Please enter a number between " << min << " and " << max << ".\n";
+        return false;
+    }
+    return true;
+}
+
 int main() {
     TransactionManager manager;
     const std::string filename = "../data/transactions.txt";
@@ -41,8 +52,11 @@ int main() {
                   << "4. Display Transactions\n"
                   << "5. Exit\n"
                   << "Enter your choice: ";
-        std::cin >> choice;
-
+        
+        while (!isValid(choice, 1, 5)) {
+            std::cout << "Enter your choice: ";
+        }
+        
         switch (choice) {
             case 1: {
                 Transaction transaction;
