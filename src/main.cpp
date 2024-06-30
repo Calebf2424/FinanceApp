@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <cmath>
 #include "TransactionManager.h"
 #include "Transaction.h"
 #include "TransactionFileIO.h"
@@ -74,7 +75,12 @@ int main() {
                 manager.displayTransactions();
                 std::cout << "\nTotal: " << manager.getSum() << "\n" << std::endl;
                 double diff = goal - manager.getSum();
-                std::cout << "\nRemaining in budget:" << diff << "\n" << std::endl;
+                if (diff > 0){
+                    std::cout << "\nRemaining in budget:" << diff << "\n" << std::endl;
+                }
+                else {
+                    std::cout << "\nYou are over budget by" << abs(diff) <<"\n" << std::endl;
+                }
                 break;
             }
             case 5: {
