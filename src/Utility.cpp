@@ -1,9 +1,8 @@
-// main.cpp
 #include <iostream>
 #include <limits>
 #include "Utility.h"
 
-bool isValidInt(int &input, int min, int max) {
+bool Utility::isValidInt(int &input, int min, int max) {
     std::cin >> input;
     if (std::cin.fail() || input < min || input > max) {
         std::cin.clear(); // clear error flags
@@ -14,4 +13,10 @@ bool isValidInt(int &input, int min, int max) {
     return true;
 }
 
-// Your main function and other code...
+bool isValidDouble(const std::string& str) {
+    std::istringstream iss(str);
+    double d;
+    char c;
+    // Try to parse the string as a double and ensure there are no extra characters
+    return iss >> d && !(iss >> c);
+}
