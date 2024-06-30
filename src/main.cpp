@@ -28,7 +28,7 @@ int main() {
     loadTransactionsFromFile(manager, filename);
 
     int choice;
-
+    clearScreen();
     std::cout << "Budget Application\n" << std::endl;
 
     do {
