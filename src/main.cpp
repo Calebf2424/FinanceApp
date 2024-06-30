@@ -37,10 +37,9 @@ int main() {
         // Display menu
         std::cout << "\nMenu:\n"
                   << "1. Add Transaction\n"
-                  << "2. Edit Transaction\n"
-                  << "3. Delete Transaction\n"
-                  << "4. Display Transactions\n"
-                  << "5. Exit\n"
+                  << "2. Delete Transaction\n"
+                  << "3. Display Transactions\n"
+                  << "4. Exit\n"
                   << "Enter your choice: ";
         
         while (!isValidInt(choice, 1, 4)) {
