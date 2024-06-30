@@ -1,26 +1,67 @@
-#include "Transaction.h"
-#include "TransactionManager.h"
-#include "TransactionFileIO.h"
 #include <iostream>
+#include <fstream>
+#include <string>
+#include "TransactionManager.h"
+
+// Function to load transactions from a file
+void loadTransactionsFromFile(TransactionManager& manager, const std::string& filename) {
+    std::vector<Transaction> transactions = TransactionFileIO::loadFromFile(filename);
+    for (const auto& transaction : transactions) {
+        manager.addTransaction(transaction);
+    }
+}
 
 int main() {
-    // Create TransactionManager object
     TransactionManager manager;
+    const std::string filename = "transactions.txt";
 
-    // Add some transactions
-    Transaction t1;
-    manager.addTransaction(t1);
+    // Load existing transactions from file
+    loadTransactionsFromFile(manager, filename);
 
-    Transaction t2;
-    manager.addTransaction(t2);
+    int choice;
+    do {
+        // Display menu
+        std::cout << "\nMenu:\n"
+                  << "1. Add Transaction\n"
+                  << "2. Edit Transaction\n"
+                  << "3. Delete Transaction\n"
+                  << "4. Display Transactions\n"
+                  << "5. Exit\n"
+                  << "Enter your choice: ";
+        std::cin >> choice;
 
-    // Display all transactions
-    std::cout << "Displaying all transactions:" << std::endl;
-    manager.displayTransactions();
+        switch (choice) {
+            case 1: {
+                Transaction transaction;
+                manager.addTransaction(transaction);
+                break;
+            }
+            case 2: {
+                // Implement edit transaction functionality
+                break;
+            }
+            case 3: {
+                std::size_t index;
+                std::cout << "Enter index of transaction to delete: ";
+                std::cin >> index;
+                manager.removeTransaction(index - 1); // Assuming index is 1-based
+                break;
+            }
+            case 4: {
+                manager.displayTransactions();
+                std::cout << "Total: " << manager.getSum() << std::endl;
+                break;
+            }
+            case 5:
+                std::cout << "Exiting...\n";
+                break;
+            default:
+                std::cout << "Invalid choice. Please enter again.\n";
+        }
+    } while (choice != 5);
 
-    // Calculate and display total sum
-    double totalSum = manager.getSum();
-    std::cout << "\nTotal sum of transactions: " << totalSum << std::endl;
+    // Save transactions back to file before exiting
+    TransactionFileIO::saveToFile(manager.getAllTransactions(), filename);
 
     return 0;
 }
