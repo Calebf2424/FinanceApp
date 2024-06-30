@@ -17,7 +17,10 @@ void Transaction::userInput() {
 
     // Input amount
     std::cout << "Amount: ";
-    std::cin >> amount;
+    int choice;
+    while (!isValidInt(choice, INT_MIN, INT_MAX)) {
+            std::cout << "Enter your choice: ";
+        }
 
     // Input description
     std::cout << "Description: ";
