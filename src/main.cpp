@@ -64,7 +64,7 @@ int main() {
 
     // Save transactions back to file before exiting
     const std::vector<Transaction>& allTransactions = manager.getAllTransactions();
-    TransactionFileIO::saveToFile(manager.allTransactions, filename);
+    TransactionFileIO::saveToFile(allTransactions, filename);
 
     return 0;
 }
