@@ -13,7 +13,7 @@ public:
     double getSum();
     double getAccountBalance() const;
     double setAccountBalance();
-    std::vector<Transaction>& getAllTransactions() const;
+    const std::vector<Transaction>& getAllTransactions() const;
 
 private:
     std::vector<Transaction> transactions;
