@@ -1,6 +1,7 @@
 #include "Transaction.h"
 #include "TransactionManager.h"
 #include "TransactionFileIO.h"
+#include "Utility.h"
 #include <iomanip>
 #include <climits>
 #include <sstream>
