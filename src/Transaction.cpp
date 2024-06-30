@@ -20,7 +20,7 @@ void Transaction::userInput() {
     // Input amount
     std::cout << "Amount: ";
     int choice;
-    while (!isValidInt(choice, INT_MIN, INT_MAX)) {
+    while (!isValidInt(choice, 0, INT_MAX)) {
             std::cout << "Enter your choice: ";
         }
 
