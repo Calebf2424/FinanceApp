@@ -2,6 +2,8 @@
 #include <fstream>
 #include <string>
 #include "TransactionManager.h"
+#include "Transaction.h"
+#include "TransactionFileIO.h"
 
 // Function to load transactions from a file
 void loadTransactionsFromFile(TransactionManager& manager, const std::string& filename) {
