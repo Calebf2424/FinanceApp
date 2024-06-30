@@ -14,7 +14,8 @@ void loadTransactionsFromFile(TransactionManager& manager, const std::string& fi
 }
 
 void clearScreen() {
-    system("cls");
+    int ignore = system("cls");
+    (void)ignore; 
 }
 
 int main() {
@@ -44,10 +45,10 @@ int main() {
                 break;
             }
             case 2: {
-                std::size_t index;
-                std::cout << "Enter index of transaction to edit: ";
-                std::cin >> index;
-                manager.editTransaction(index - 1); // Assuming index is 1-based
+                //std::size_t index;
+                //std::cout << "Enter index of transaction to edit: ";
+                //std::cin >> index;
+                //manager.editTransaction(index - 1); // Assuming index is 1-based
                 break;
             }
             case 3: {
