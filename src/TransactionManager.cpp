@@ -34,3 +34,7 @@ double TransactionManager::getSum(){
     }
     return total;
 }
+
+const std::vector<Transaction>& TransactionManager::getAllTransactions() const {
+    return transactions;
+}
