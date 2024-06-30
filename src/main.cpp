@@ -13,6 +13,10 @@ void loadTransactionsFromFile(TransactionManager& manager, const std::string& fi
     }
 }
 
+void clearScreen() {
+    system("cls");
+}
+
 int main() {
     TransactionManager manager;
     const std::string filename = "transactions.txt";
@@ -22,6 +26,7 @@ int main() {
 
     int choice;
     do {
+        clearScreen();
         // Display menu
         std::cout << "\nMenu:\n"
                   << "1. Add Transaction\n"
@@ -39,7 +44,10 @@ int main() {
                 break;
             }
             case 2: {
-                // Implement edit transaction functionality
+                std::size_t index;
+                std::cout << "Enter index of transaction to edit: ";
+                std::cin >> index;
+                manager.editTransaction(index - 1); // Assuming index is 1-based
                 break;
             }
             case 3: {
