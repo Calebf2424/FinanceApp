@@ -63,7 +63,8 @@ int main() {
     } while (choice != 5);
 
     // Save transactions back to file before exiting
-    TransactionFileIO::saveToFile(manager.getAllTransactions(), filename);
+    const std::vector<Transaction>& allTransactions = manager.getAllTransactions();
+    TransactionFileIO::saveToFile(manager.allTransactions, filename);
 
     return 0;
 }
