@@ -36,6 +36,13 @@ double TransactionManager::getSum(){
     return total;
 }
 
+double TransactionManager::getMonthGoal() {
+    double goal;
+    std::cout << "Enter goal limit for the month :\n";
+    std::cin >> goal;
+    return goal;
+}
+
 const std::vector<Transaction>& TransactionManager::getAllTransactions() const {
     return transactions;
 }

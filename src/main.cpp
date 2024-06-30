@@ -43,7 +43,7 @@ int main() {
                   << "5. Exit\n"
                   << "Enter your choice: ";
         
-        while (!isValidInt(choice, 1, 5)) {
+        while (!isValidInt(choice, 1, 4)) {
             std::cout << "Enter your choice: ";
         }
         
@@ -55,13 +55,6 @@ int main() {
                 break;
             }
             case 2: {
-                //std::size_t index;
-                //std::cout << "Enter index of transaction to edit: ";
-                //std::cin >> index;
-                //manager.editTransaction(index - 1); // Assuming index is 1-based
-                break;
-            }
-            case 3: {
                 std::size_t index;
                 std::cout << "Enter index of transaction to delete: ";
                 std::cin >> index;
@@ -69,18 +62,18 @@ int main() {
                 clearScreen();
                 break;
             }
-            case 4: {
+            case 3: {
                 manager.displayTransactions();
                 std::cout << "\nTotal: " << manager.getSum() << "\n" << std::endl;
                 break;
             }
-            case 5:
+            case 4:
                 std::cout << "Exiting...\n";
                 break;
             default:
                 std::cout << "Invalid choice. Please enter again.\n";
         }
-    } while (choice != 5);
+    } while (choice != 4);
 
     // Save transactions back to file before exiting
     const std::vector<Transaction>& allTransactions = manager.getAllTransactions();

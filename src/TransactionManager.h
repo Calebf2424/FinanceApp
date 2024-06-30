@@ -12,6 +12,7 @@ public:
     void displayTransactions() const;
     double getSum();
     const std::vector<Transaction>& getAllTransactions() const;
+    double getMonthGoal();
 
 private:
     std::vector<Transaction> transactions;
