@@ -4,6 +4,7 @@
 #include "TransactionManager.h"
 #include "Transaction.h"
 #include "TransactionFileIO.h"
+#includen "Utility.h"
 
 // Function to load transactions from a file
 void loadTransactionsFromFile(TransactionManager& manager, const std::string& filename) {
@@ -18,17 +19,6 @@ void clearScreen() {
     if (result != 0) {
         std::cerr << "Failed to clear screen using cls." << std::endl;
     }
-}
-
-bool isValid(int &input, int min, int max) {
-    std::cin >> input;
-    if (std::cin.fail() || input < min || input > max) {
-        std::cin.clear(); // clear error flags
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // discard invalid input
-        std::cout << "Invalid input. Please enter a number between " << min << " and " << max << ".\n";
-        return false;
-    }
-    return true;
 }
 
 int main() {
@@ -53,7 +43,7 @@ int main() {
                   << "5. Exit\n"
                   << "Enter your choice: ";
         
-        while (!isValid(choice, 1, 5)) {
+        while (!isValidInt(choice, 1, 5)) {
             std::cout << "Enter your choice: ";
         }
         
