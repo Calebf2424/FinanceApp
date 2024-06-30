@@ -34,3 +34,5 @@ double TransactionManager::getSum(){
     }
     return total;
 }
+
+void TransactionManager::setAccount()
